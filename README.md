@@ -10,7 +10,7 @@
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|sound|text||
+|audio|text||
 |image|text||
 |text|text||
 |user_id|integer|null: false, foreign_key: true|

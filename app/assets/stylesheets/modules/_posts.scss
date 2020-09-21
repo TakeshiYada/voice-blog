@@ -1,0 +1,349 @@
+* {
+  box-sizing: inherit;
+  background-repeat: no-repeat;
+}
+
+div{
+  display: block;
+}
+
+.flex{
+  display: flex;
+}
+
+.center{
+  justify-content: center;
+}
+
+header{
+  display: block;
+}
+
+.Container{
+  max-width: 600px;
+  min-width: 200px;
+  width: 600px;
+  padding-bottom: 56px;
+}
+
+.Container, body{
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.PostPage{
+}
+
+.PageHeader{
+  height: 63px;
+  background: hsla(0,0%,100%,.94);
+  box-shadow: 0 1.5px 20px rgba(0,0,0,.16);
+  backdrop-filter: blur(20px);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 116%;
+  letter-spacing: .045em;
+}
+
+.wrap{
+  flex-wrap: wrap;
+}
+
+.verticalCenter{
+  align-items: center;
+}
+
+.PostList{
+  padding: 0 1rem;
+  margin-top: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.PostItemWrapper{
+  box-shadow: 0 4px 10px rgba(28,47,86,.05),0 2px 5px rgba(28,47,86,.05);
+  border: 1px solid rgba(28,47,86,.05);
+  border-radius: 4px;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.PostItem{
+
+}
+
+.PostItemImage{
+    height: 170px;
+    width: 100%;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.PostItemInfoWrapper{
+
+}
+
+.PostItemInfo{
+    background-color: #fff;
+    padding: 1rem 16px 1rem 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.PostItemInfo.Read .MarkAsRead {
+  background-color: #b6b6b6;
+}
+
+.PostItemInfo .MarkAsRead{
+  background-color: #1c2f56;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 8px;
+}
+
+.PostItemInfo span {
+  display: block;
+  font-size: .75rem;
+  color: #b6b6b6;
+}
+
+.PostItemInfo.Read h2 {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.PostItemInfo h2 {
+  color: #1c2f56;
+  font-size: 1.3rem;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.BottomNav_BottomNav__2Vey4 {
+  position: fixed;
+  bottom: 0;
+  background: hsla(0,0%,100%,.94);
+  box-shadow: 0 -0.5px 0 rgba(0,0,0,.3);
+  backdrop-filter: blur(20px);
+  z-index: 10;
+  max-width: 600px;
+  min-width: 200px;
+  width: 100%;
+}
+
+nav {
+  display: block;
+}
+
+.BottomNav_BottomNav__2Vey4 .BottomNav_NavItems___s-90 {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 8px 19px;
+  text-align: center;
+  border-top: 1px solid #d1d1d1;
+}
+
+nav ol, nav ul {
+  list-style: none;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.BottomNav_BottomNav__2Vey4 .BottomNav_NavItems___s-90 .BottomNav_NavItem__tgPfn {
+  width: 76px;
+}
+
+.BottomNav_BottomNav__2Vey4 .BottomNav_NavItems___s-90 .BottomNav_NavItem__tgPfn a {
+  color: rgba(51,51,51,.7);
+  display: block;
+  width: 100%;
+}
+
+.BottomNav_BottomNav__2Vey4 .BottomNav_NavItems___s-90 .BottomNav_NavItem__tgPfn .BottomNav_title_active__1SVTZ {
+  font-family: -apple-system,BlinkMacSystemFont,Sans-Serif;
+  color: #1c2f56;
+  font-weight: 700;
+}
+
+.BottomNav_BottomNav__2Vey4 .BottomNav_NavItems___s-90 .BottomNav_NavItem__tgPfn .icon {
+  margin-bottom: 5px;
+}
+
+.BottomNav_BottomNav__2Vey4 .BottomNav_NavItems___s-90 .BottomNav_NavItem__tgPfn .BottomNav_title__11_Qy, .BottomNav_BottomNav__2Vey4 .BottomNav_NavItems___s-90 .BottomNav_NavItem__tgPfn .BottomNav_title_active__1SVTZ {
+  font-family: Noto Sans CJK JP;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  text-align: center;
+  letter-spacing: 2.26px;
+}
+
+.PaginationWrapper {
+  padding: 0 1rem;
+  margin-bottom: 20px;
+}
+
+.Pagination {
+  border: 1px solid #1c2f56;
+  color: #1c2f56;
+  text-align: center;
+  padding: 14px 0;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.PostDetailPage {
+  position: relative;
+}
+
+.PostDetailPage .PostHeader {
+  height: 176px;
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.PostHeader {
+  position: relative;
+}
+
+.PostDetailPage .PostHeaderBack {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0 4px 5px rgba(28,47,86,.05));
+  filter: drop-shadow(0 4px 5px rgba(28,47,86,.05));
+}
+
+.PostDetailPage .PostInfo {
+  background-color: #fff;
+  margin: -42px 4px 0;
+  box-shadow: 0 4px 10px rgba(28,47,86,.05);
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+}
+
+.PostDetailPage .PostInfo .PlayerButton {
+  position: absolute;
+  top: -26px;
+  left: 16px;
+  -webkit-filter: drop-shadow(0 3px 5px rgba(0,0,0,.35));
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.35));
+}
+
+.PlayerButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #1c2f56;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.PlayerButton img {
+  height: 11px;
+  width: 11px;
+}
+
+.PostDetailPage img {
+  max-width: 100%;
+}
+
+.arrow{
+  max-width: 100%;
+  border-style: none;
+  vertical-align: middle;
+  color: #fff;
+}
+
+img {
+  border-style: none;
+}
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+.PostDetailPage .PostInfo .PlayerTime {
+  position: absolute;
+  top: 6px;
+  left: 70px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1c2f56;
+}
+
+.PostDetailTitleWithAudio {
+  margin-top: 15px;
+}
+
+.PostDetailTitle {
+  font-size: 20px;
+  letter-spacing: .19rem;
+  color: #1c2f56;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.PostDetailPage .PostInfo .PublishedAt {
+  color: #b6b6b6;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.PostDetail {
+  padding: 0 1rem;
+}
+
+.PostDetailBody {
+  margin-top: 16px;
+  font-size: 16px;
+  padding-bottom: 100px;
+  font-weight: 400;
+  color: #1c2f56;
+  line-height: 1.5;
+  letter-spacing: .13rem;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+.PostDetailBody p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.PostDetailBody h2 {
+  margin: 2rem 0 .6rem;
+  font-size: 20px;
+  border-bottom: 2px solid #1c2f56;
+}
+
+b, strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
