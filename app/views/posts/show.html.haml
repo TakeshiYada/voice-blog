@@ -1,0 +1,37 @@
+.flex.center
+  .Container
+    .PostDetailPage
+      %header.PostHeader
+        = image_tag @post.image, class: "PostHeader" if @post.image.present?
+        .PostHeaderBack
+          =link_to '/' do
+            = icon('fas', 'arrow-left', class: "arrow")
+      .PostInfo
+        .div
+          %audio
+          .PlayerButton.flex.center.verticalCenter
+            = icon('fas', 'caret-right', class: "arrow")
+          %span.PlayerTime 00:00
+        .flex.verticalCenter.PostDetailTitleWithAudio
+          %h2.PostDetailTitle
+            = @post.title
+        %span.PublishedAt
+          = @post.created_at.strftime("%Y-%m-%d")
+      .PostDetail
+        .PostDetailBody
+          = @post.text
+
+      %nav.BottomNav_BottomNav__2Vey4
+        %ul.BottomNav_NavItems___s-90
+          .BottomNav_NavItem__tgPfn
+            =link_to '/' do
+              = icon('fas', 'home', class: "icon")
+              %p.BottomNav_title_active__1SVTZ ホーム
+          .BottomNav_NavItem__tgPfn
+            =link_to "#" do
+              = icon('fab', 'facebook-square', class: "icon")
+              %p.BottomNav_title_active__1SVTZ お気に入り
+          .BottomNav_NavItem__tgPfn
+            =link_to "#" do
+              = icon('fab', 'facebook-square', class: "icon")
+              %p.BottomNav_title_active__1SVTZ 設定
