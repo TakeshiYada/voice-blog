@@ -32,6 +32,8 @@ default: &default
     - .ttf
     - .woff
     - .woff2
+    - .mp3
+    - .m4a
 
   extensions:
     - .mjs

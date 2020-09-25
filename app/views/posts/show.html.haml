@@ -7,11 +7,6 @@
           =link_to '/' do
             = icon('fas', 'arrow-left', class: "arrow")
       .PostInfo
-        .div
-          %audio
-          .PlayerButton.flex.center.verticalCenter
-            = icon('fas', 'caret-right', class: "arrow")
-          %span.PlayerTime 00:00
         .flex.verticalCenter.PostDetailTitleWithAudio
           %h2.PostDetailTitle
             = @post.title
@@ -19,7 +14,11 @@
           = @post.created_at.strftime("%Y-%m-%d")
       .PostDetail
         .PostDetailBody
-          = @post.text
+          = simple_format(@post.text)
+      .Player.flex.spaceBetween.wrap
+        %h2.PlayerTitle
+          = @post.title
+          = audio_tag(@post.audio, id: 'play-audio', controls: true)
 
       %nav.BottomNav_BottomNav__2Vey4
         %ul.BottomNav_NavItems___s-90
