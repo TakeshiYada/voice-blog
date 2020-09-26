@@ -25,9 +25,14 @@
             %p.BottomNav_title_active__1SVTZ ホーム
         .BottomNav_NavItem__tgPfn
           - if user_signed_in?
-            =link_to new_post_path do
-              = icon('fas', 'edit', class: "icon")
-              %p.BottomNav_title_active__1SVTZ 投稿
+            - if current_user.admin?
+              =link_to new_post_path do
+                = icon('fas', 'edit', class: "icon")
+                %p.BottomNav_title_active__1SVTZ 投稿
+            - else
+              =link_to "/" do
+                = icon('far', 'star', class: "icon")
+                %p.BottomNav_title_active__1SVTZ お気に入り
           - else
             =link_to new_user_registration_path do
               = icon('fas', 'user-plus', class: "icon")
