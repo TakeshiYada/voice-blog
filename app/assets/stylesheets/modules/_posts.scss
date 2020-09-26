@@ -390,7 +390,7 @@ b, strong {
     margin-top: 10px;
   }
   &__submit-btn{
-    width: 70%;
+    width: 40%;
     height: 30px;
   }
 }
@@ -406,4 +406,22 @@ b, strong {
 
 .actions{
   margin-top: 10px;
+}
+
+.delete-btn {
+  border: 1px solid black;
+  width: 20%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  color: black;
+}
+
+.Delete-box{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }

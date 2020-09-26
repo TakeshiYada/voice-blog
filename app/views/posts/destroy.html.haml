@@ -1,14 +1,6 @@
 .flex.center
   .Container
-    %h2.Post-title 投稿する
-    = form_with model: [@post], html: {class: "Form-info"}, local: true do |f|
-      .Form-info__contents
-        = f.text_field :audio, class: 'Form-info__audio', placeholder: 'type a audio'
-        = f.text_field :image, class: 'Form-info__image', placeholder: 'type a image'
-        = f.text_field :title, class: 'Form-info__image', placeholder: 'type a title'
-        = f.text_area :text, class: 'Form-info__text', placeholder: 'type a text', rows: "10"
-      .Form-info__submit-box
-        = f.submit 'Send', class: 'Form-info__submit-btn'
+    %h2 削除完了
 
     %nav.BottomNav_BottomNav__2Vey4
       %ul.BottomNav_NavItems___s-90
