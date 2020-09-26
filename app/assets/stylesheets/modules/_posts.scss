@@ -360,4 +360,42 @@ b, strong {
   color: #1c2f56;
 }
 
+.Form-info {
+  &__contents{
+    display: flex;
+    flex-direction: column;
+  }
 
+  &__audio{
+    margin-top: 10px;
+  }
+
+  &__image{
+    margin-top: 10px;
+  }
+
+  &__title {
+    margin-top: 10px;
+  }
+
+  &__text {
+    height: 500px;
+    margin-top: 10px;
+  }
+  
+  &__submit-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  &__submit-btn{
+    width: 70%;
+    height: 30px;
+  }
+}
+
+.Post-title {
+  text-align: center;
+  padding-top: 10px;
+}
