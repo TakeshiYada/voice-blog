@@ -3,16 +3,19 @@
     .PostPage
       %header.PageHeader.flex.center.wrap.verticalCenter Voice Blog
       .PostList
-        - @posts.each do |post|
-          = link_to post_path(post.id), class: "PostItemWrapper" do
-            .PostItem
-              = image_tag post.image, class: 'PostItemImage' if post.image.present?
-              .PostItemInfoWrapper
-                .PostItemInfo.Read
-                  %span.date 
-                    = post.created_at.strftime("%Y-%m-%d")
-                  %h2.title 
-                    = post.title
+        - if user_signed_in?
+          - @posts.each do |post|
+            = link_to post_path(post.id), class: "PostItemWrapper" do
+              .PostItem
+                = image_tag post.image, class: 'PostItemImage' if post.image.present?
+                .PostItemInfoWrapper
+                  .PostItemInfo.Read
+                    %span.date 
+                      = post.created_at.strftime("%Y-%m-%d")
+                    %h2.title 
+                      = post.title
+        - else 
+          .message ログインをして下さい。
 
     %nav.BottomNav_BottomNav__2Vey4
       %ul.BottomNav_NavItems___s-90
@@ -21,12 +24,21 @@
             = icon('fas', 'home', class: "icon")
             %p.BottomNav_title_active__1SVTZ ホーム
         .BottomNav_NavItem__tgPfn
-          =link_to new_post_path do
-            = icon('fas', 'edit', class: "icon")
-            %p.BottomNav_title_active__1SVTZ 投稿
+          - if user_signed_in?
+            =link_to new_post_path do
+              = icon('fas', 'edit', class: "icon")
+              %p.BottomNav_title_active__1SVTZ 投稿
+          - else
+            =link_to new_user_registration_path do
+              = icon('fas', 'user-plus', class: "icon")
+              %p.BottomNav_title_active__1SVTZ 新規登録
         .BottomNav_NavItem__tgPfn
-          =link_to "#" do
-            = icon('fab', 'facebook-square', class: "icon")
-            %p.BottomNav_title_active__1SVTZ 設定
-        
+          - if user_signed_in?
+            =link_to destroy_user_session_path, method: :delete do
+              = icon('fas', 'sign-out-alt', class: "icon")
+              %p.BottomNav_title_active__1SVTZ ログアウト
+          - else
+            =link_to new_user_session_path do
+              = icon('fas', 'sign-in-alt', class: "icon")
+              %p.BottomNav_title_active__1SVTZ ログイン
 
