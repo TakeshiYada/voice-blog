@@ -1,26 +1,19 @@
-%h2 投稿完了
+.flex.center
+  .Container
+    %h2 投稿完了
 
-%nav.BottomNav_BottomNav__2Vey4
-  %ul.BottomNav_NavItems___s-90
-    .BottomNav_NavItem__tgPfn
-      =link_to "/" do
-        = icon('fas', 'home', class: "icon")
-        %p.BottomNav_title_active__1SVTZ ホーム
-    .BottomNav_NavItem__tgPfn
-      - if user_signed_in?
-        =link_to new_post_path do
-          = icon('fas', 'edit', class: "icon")
-          %p.BottomNav_title_active__1SVTZ 投稿
-      - else
-        =link_to new_user_registration_path do
-          = icon('fas', 'user-plus', class: "icon")
-          %p.BottomNav_title_active__1SVTZ 新規登録
-    .BottomNav_NavItem__tgPfn
-      - if user_signed_in?
-        =link_to destroy_user_session_path, method: :delete do
-          = icon('fas', 'sign-out-alt', class: "icon")
-          %p.BottomNav_title_active__1SVTZ ログアウト
-      - else
-        =link_to new_user_session_path do
-          = icon('fas', 'sign-in-alt', class: "icon")
-          %p.BottomNav_title_active__1SVTZ ログイン
+    %nav.BottomNav_BottomNav__2Vey4
+      %ul.BottomNav_NavItems___s-90
+        .BottomNav_NavItem__tgPfn
+          =link_to "/" do
+            = icon('fas', 'home', class: "icon")
+            %p.BottomNav_title_active__1SVTZ ホーム
+        .BottomNav_NavItem__tgPfn
+          - if user_signed_in?
+            =link_to destroy_user_session_path, method: :delete do
+              = icon('fas', 'sign-out-alt', class: "icon")
+              %p.BottomNav_title_active__1SVTZ ログアウト
+          - else
+            =link_to new_user_session_path do
+              = icon('fas', 'sign-in-alt', class: "icon")
+              %p.BottomNav_title_active__1SVTZ ログイン

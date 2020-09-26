@@ -1,6 +1,8 @@
 .flex.center
   .Container
-    %h2.Post-title 投稿する
+    .Delete-box
+      = link_to 'Delete',post_path(@post.id), method: :delete,class: "delete-btn"
+    %h2.Post-title 編集する
     = form_with model: [@post], html: {class: "Form-info"}, local: true do |f|
       .Form-info__contents
         = f.text_field :audio, class: 'Form-info__audio', placeholder: 'type a audio'
