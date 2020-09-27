@@ -382,6 +382,14 @@ b, strong {
     height: 500px;
     margin-top: 10px;
   }
+
+  &__comment {
+    margin-top: 10px;
+  }
+
+  &__nickname {
+    margin-top: 10px;
+  }
   
   &__submit-box{
     display: flex;
@@ -424,4 +432,27 @@ b, strong {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.PostDetailComments{
+  margin-top: 20px;
+  margin-bottom: 300px;
+
+}
+
+.comment-box{
+  display: flex;
+  height: 30px;
+  align-items: center;
+}
+
+.nickname{
+  margin-right: 10px;
+  color: gray;
+}
+
+.CommentListTitle{
+  height: 30px;
+  display: flex;
+  align-items: center;
 }
