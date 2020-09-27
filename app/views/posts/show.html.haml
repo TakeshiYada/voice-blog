@@ -15,6 +15,23 @@
       .PostDetail
         .PostDetailBody
           = simple_format(@post.text)
+        %h4.Comment-title コメント投稿
+        = form_with model: [@post, @comment], html: {class: "Form-info"}, local: true do |f|
+          .Form-info__contents
+            = f.text_field :nickname, class: 'Form-info__nickname', placeholder: 'type a nickname'
+            = f.text_area :text, class: 'Form-info__comment', placeholder: 'type a text', rows: "3"
+          .Form-info__submit-box
+            = f.submit 'Send', class: 'Form-info__submit-btn'
+        .PostDetailComments
+          %h4.CommentListTitle <コメント一覧>
+          - if @comments
+            - @comments.each do |comment|
+              .comment-box
+                .nickname 
+                  = comment.nickname
+                .comment
+                  = comment.text
+
       .Player.flex.spaceBetween.wrap
         %h2.PlayerTitle
           = @post.title
@@ -32,10 +49,6 @@
                 =link_to edit_post_path(@post.id) do
                   = icon('fas', 'edit', class: "icon")
                   %p.BottomNav_title_active__1SVTZ 編集
-              - else
-                =link_to "/" do
-                  = icon('far', 'comments', class: "icon")
-                  %p.BottomNav_title_active__1SVTZ コメント
             - else
               =link_to new_user_registration_path do
                 = icon('fas', 'user-plus', class: "icon")
