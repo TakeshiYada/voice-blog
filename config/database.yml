@@ -49,12 +49,6 @@ test:
 #
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  database: db/production.postgresql
-  pool: 5
-  username: test_postgre
-  password:
-  #database: voice_blog_production
-  #username: voice_blog
-  #password: <%= ENV['VOICE_BLOG_DATABASE_PASSWORD'] %>
+  database: voice_blog_production
+  username: voice_blog
+  password: <%= ENV['VOICE_BLOG_DATABASE_PASSWORD'] %>
